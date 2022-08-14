@@ -1,0 +1,17 @@
+C:\Users\cyberhelmet\source\repos\CS223lab\bin\Debug\net6.0-windows\CS223lab.exe
+C:\Users\cyberhelmet\source\repos\CS223lab\bin\Debug\net6.0-windows\CS223lab.deps.json
+C:\Users\cyberhelmet\source\repos\CS223lab\bin\Debug\net6.0-windows\CS223lab.runtimeconfig.json
+C:\Users\cyberhelmet\source\repos\CS223lab\bin\Debug\net6.0-windows\CS223lab.dll
+C:\Users\cyberhelmet\source\repos\CS223lab\bin\Debug\net6.0-windows\CS223lab.pdb
+C:\Users\cyberhelmet\source\repos\CS223lab\obj\Debug\net6.0-windows\CS223lab.csproj.AssemblyReference.cache
+C:\Users\cyberhelmet\source\repos\CS223lab\obj\Debug\net6.0-windows\CS223lab.Form1.resources
+C:\Users\cyberhelmet\source\repos\CS223lab\obj\Debug\net6.0-windows\CS223lab.csproj.GenerateResource.cache
+C:\Users\cyberhelmet\source\repos\CS223lab\obj\Debug\net6.0-windows\CS223lab.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\cyberhelmet\source\repos\CS223lab\obj\Debug\net6.0-windows\CS223lab.AssemblyInfoInputs.cache
+C:\Users\cyberhelmet\source\repos\CS223lab\obj\Debug\net6.0-windows\CS223lab.AssemblyInfo.cs
+C:\Users\cyberhelmet\source\repos\CS223lab\obj\Debug\net6.0-windows\CS223lab.csproj.CoreCompileInputs.cache
+C:\Users\cyberhelmet\source\repos\CS223lab\obj\Debug\net6.0-windows\CS223lab.dll
+C:\Users\cyberhelmet\source\repos\CS223lab\obj\Debug\net6.0-windows\refint\CS223lab.dll
+C:\Users\cyberhelmet\source\repos\CS223lab\obj\Debug\net6.0-windows\CS223lab.pdb
+C:\Users\cyberhelmet\source\repos\CS223lab\obj\Debug\net6.0-windows\CS223lab.genruntimeconfig.cache
+C:\Users\cyberhelmet\source\repos\CS223lab\obj\Debug\net6.0-windows\ref\CS223lab.dll
