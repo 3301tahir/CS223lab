@@ -13,16 +13,21 @@ namespace CS223lab
         public DateTime dateAdded { get; set; }
         public string name { get; set; }
         public int count { get; set; }
-        public int price { get; set; }
+        public double price { get; set; }
         public bool availability { get; set; }
         public bool delivery { get; set; }
         public bool installation { get; set; }
 
         static private List<Product> list = new List<Product>();
 
-        static public void save(Product product)
+        static public void Add(Product product)
         {
             list.Add(product);
+        }
+
+        static public void Remove(Product product)
+        {
+            list.Remove(product);
         }
 
         static public List<Product> GetAllProducts()
