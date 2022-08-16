@@ -4,7 +4,6 @@ C:\Users\cyberhelmet\source\repos\CS223lab\bin\Debug\net6.0-windows\CS223lab.run
 C:\Users\cyberhelmet\source\repos\CS223lab\bin\Debug\net6.0-windows\CS223lab.dll
 C:\Users\cyberhelmet\source\repos\CS223lab\bin\Debug\net6.0-windows\CS223lab.pdb
 C:\Users\cyberhelmet\source\repos\CS223lab\obj\Debug\net6.0-windows\CS223lab.csproj.AssemblyReference.cache
-C:\Users\cyberhelmet\source\repos\CS223lab\obj\Debug\net6.0-windows\CS223lab.Form1.resources
 C:\Users\cyberhelmet\source\repos\CS223lab\obj\Debug\net6.0-windows\CS223lab.csproj.GenerateResource.cache
 C:\Users\cyberhelmet\source\repos\CS223lab\obj\Debug\net6.0-windows\CS223lab.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\cyberhelmet\source\repos\CS223lab\obj\Debug\net6.0-windows\CS223lab.AssemblyInfoInputs.cache
@@ -15,3 +14,6 @@ C:\Users\cyberhelmet\source\repos\CS223lab\obj\Debug\net6.0-windows\refint\CS223
 C:\Users\cyberhelmet\source\repos\CS223lab\obj\Debug\net6.0-windows\CS223lab.pdb
 C:\Users\cyberhelmet\source\repos\CS223lab\obj\Debug\net6.0-windows\CS223lab.genruntimeconfig.cache
 C:\Users\cyberhelmet\source\repos\CS223lab\obj\Debug\net6.0-windows\ref\CS223lab.dll
+C:\Users\cyberhelmet\source\repos\CS223lab\obj\Debug\net6.0-windows\CS223lab.FormAddRemove.resources
+C:\Users\cyberhelmet\source\repos\CS223lab\obj\Debug\net6.0-windows\CS223lab.FormMain.resources
+C:\Users\cyberhelmet\source\repos\CS223lab\obj\Debug\net6.0-windows\CS223lab.FormSearch.resources

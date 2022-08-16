@@ -1,6 +1,6 @@
 ﻿namespace CS223lab
 {
-    partial class Form1
+    partial class FormAddRemove
     {
         /// <summary>
         ///  Required designer variable.

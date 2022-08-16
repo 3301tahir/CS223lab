@@ -2,9 +2,9 @@ using System.Text.RegularExpressions;
 
 namespace CS223lab
 {
-    public partial class Form1 : Form
+    public partial class FormAddRemove : Form
     {
-        public Form1()
+        public FormAddRemove()
         {
             InitializeComponent();
         }
