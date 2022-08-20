@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CS223lab
 {
-    internal class Product
+    public class Product
     {
         public string productNumber { get; set; }
         public string inventoryNumber { get; set; }

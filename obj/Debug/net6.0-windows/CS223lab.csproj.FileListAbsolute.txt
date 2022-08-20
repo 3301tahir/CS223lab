@@ -19,3 +19,4 @@ C:\Users\cyberhelmet\source\repos\CS223lab\obj\Debug\net6.0-windows\CS223lab.For
 C:\Users\cyberhelmet\source\repos\CS223lab\obj\Debug\net6.0-windows\CS223lab.FormSearch.resources
 C:\Users\cyberhelmet\source\repos\CS223lab\obj\Debug\net6.0-windows\CS223lab.FormDisplay.resources
 C:\Users\cyberhelmet\source\repos\CS223lab\obj\Debug\net6.0-windows\CS223lab.UCProductCard.resources
+C:\Users\cyberhelmet\source\repos\CS223lab\obj\Debug\net6.0-windows\CS223lab.FormPCDetails.resources

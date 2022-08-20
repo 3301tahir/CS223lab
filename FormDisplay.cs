@@ -26,6 +26,13 @@ namespace CS223lab
                 card.InventoryNumber = item.inventoryNumber;
                 card.Name = item.name;
 
+                // Click event handler
+                card.Click += (Object sender, EventArgs e) =>
+                {
+                    FormPCDetails form = new(item);
+                    form.Show();
+                };
+
                 flowLayoutPanel1.Controls.Add(card);
 
             }
