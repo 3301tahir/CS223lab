@@ -16,6 +16,9 @@
     <Compile Update="FormSearch.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="FormSQLConn.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="UCProductCard.cs">
       <SubType>UserControl</SubType>
     </Compile>
