@@ -23,7 +23,7 @@ namespace CS223lab
             {
                 ActiveMdiChild.Close();
             }
-            FormAddRemove f = new();
+            FormManageProducts f = new();
             f.MdiParent = this;
             f.Show();
         }

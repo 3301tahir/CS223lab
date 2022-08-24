@@ -1,6 +1,6 @@
 ﻿namespace CS223lab
 {
-    partial class FormAddRemove
+    partial class FormManageProducts
     {
         /// <summary>
         ///  Required designer variable.
@@ -52,6 +52,7 @@
             this.dgvProductsList = new System.Windows.Forms.DataGridView();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.btnClear = new System.Windows.Forms.Button();
+            this.btnUpdate = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProductsList)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
@@ -224,7 +225,7 @@
             // 
             // btnRemove
             // 
-            this.btnRemove.Location = new System.Drawing.Point(549, 345);
+            this.btnRemove.Location = new System.Drawing.Point(633, 345);
             this.btnRemove.Name = "btnRemove";
             this.btnRemove.Size = new System.Drawing.Size(94, 29);
             this.btnRemove.TabIndex = 20;
@@ -243,6 +244,7 @@
             this.dgvProductsList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvProductsList.Size = new System.Drawing.Size(805, 259);
             this.dgvProductsList.TabIndex = 21;
+            this.dgvProductsList.SelectionChanged += new System.EventHandler(this.dgvProductsList_SelectionChanged);
             // 
             // errorProvider1
             // 
@@ -258,11 +260,22 @@
             this.btnClear.UseVisualStyleBackColor = true;
             this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
-            // FormAddRemove
+            // btnUpdate
+            // 
+            this.btnUpdate.Location = new System.Drawing.Point(523, 345);
+            this.btnUpdate.Name = "btnUpdate";
+            this.btnUpdate.Size = new System.Drawing.Size(94, 29);
+            this.btnUpdate.TabIndex = 23;
+            this.btnUpdate.Text = "Update";
+            this.btnUpdate.UseVisualStyleBackColor = true;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
+            // 
+            // FormManageProducts
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(829, 679);
+            this.Controls.Add(this.btnUpdate);
             this.Controls.Add(this.btnClear);
             this.Controls.Add(this.dgvProductsList);
             this.Controls.Add(this.btnRemove);
@@ -286,7 +299,8 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "FormAddRemove";
+            this.Name = "FormManageProducts";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvProductsList)).EndInit();
@@ -321,5 +335,6 @@
         private DataGridView dgvProductsList;
         private ErrorProvider errorProvider1;
         private Button btnClear;
+        private Button btnUpdate;
     }
 }

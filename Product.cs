@@ -21,23 +21,21 @@ namespace CS223lab
 
         static private List<Product> list = new List<Product>();
 
-        static public void Add(Product product)
+        public void Add()
         {
             string query = "INSERT INTO Product VALUES('" +
-                product.productNumber + "', '" +
-                product.inventoryNumber + "', '" +
-                product.dateAdded + "', '" +
-                product.name + "', " +
-                product.count + ", " +
-                product.price + ", " +
-                Convert.ToInt32(product.availability) + ", " +
-                Convert.ToInt32(product.delivery) + ", " +
-                Convert.ToInt32(product.installation) + ")";
+                this.productNumber + "', '" +
+                this.inventoryNumber + "', '" +
+                this.dateAdded + "', '" +
+                this.name + "', " +
+                this.count + ", " +
+                this.price + ", " +
+                Convert.ToInt32(this.availability) + ", " +
+                Convert.ToInt32(this.delivery) + ", " +
+                Convert.ToInt32(this.installation) + ")";
             try
             {
-                Console.Write("Hello");
                 MySQLConnection.ExecuteNonQuery(query);
-                
             }
             catch (Exception e)
             {
@@ -46,9 +44,40 @@ namespace CS223lab
 
         }
 
-        static public void Remove(Product product)
+        public void Update(Product updatedProduct)
         {
-            list.Remove(product);
+            string query = "UPDATE Product SET " +
+                "productNumber = '" + updatedProduct.productNumber + "', " +
+                "inventoryNumber = '" + updatedProduct.inventoryNumber + "', " +
+                "dateAdded = '" + updatedProduct.dateAdded + "', " +
+                "name = '" + updatedProduct.name + "', " +
+                "count = " + updatedProduct.count + ", " +
+                "price = " + updatedProduct.price + ", " +
+                "availability = " + Convert.ToInt32(updatedProduct.availability) + ", " +
+                "delivery = " + Convert.ToInt32(updatedProduct.delivery) + ", " +
+                "installation = " + Convert.ToInt32(updatedProduct.installation) + 
+                " WHERE productNumber = '" + this.productNumber + "'";
+            try
+            {
+                MySQLConnection.ExecuteNonQuery(query);
+            } catch (Exception e)
+            {
+                MessageBox.Show(e.Message);
+            }
+        }
+
+        public void Remove()
+        {
+            string query = "DELETE FROM Product WHERE productNumber = '" +
+                this.productNumber + "'";
+            try
+            {
+                MySQLConnection.ExecuteNonQuery(query);
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message);
+            }
         }
 
         static public List<Product> GetAllProducts()
