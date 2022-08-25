@@ -46,7 +46,7 @@ namespace CS223lab
                         price = double.Parse(tbPrice.Text),
                         availability = radioAvailabilityYes.Checked,
                         delivery = checkAdditionalDelivery.Checked,
-                        installation = checkAdditionalInstallation.Checked
+                        warranty = checkAdditionalWarranty.Checked
                     };
                     newProduct.Add();
                     MessageBox.Show("Product added");
@@ -86,7 +86,7 @@ namespace CS223lab
                         price = double.Parse(tbPrice.Text),
                         availability = radioAvailabilityYes.Checked,
                         delivery = checkAdditionalDelivery.Checked,
-                        installation = checkAdditionalInstallation.Checked
+                        warranty = checkAdditionalWarranty.Checked
                 };
                 selectedProduct.Update(updatedProduct);
                 MessageBox.Show("Product updated");
@@ -145,7 +145,7 @@ namespace CS223lab
             radioAvailabilityYes.Checked = false;
 
             checkAdditionalDelivery.Checked = false;
-            checkAdditionalInstallation.Checked = false;
+            checkAdditionalWarranty.Checked = false;
 
             dateTimePicker1.Value = DateTime.Now;
 
@@ -169,7 +169,7 @@ namespace CS223lab
                 radioAvailabilityNo.Checked = true;
 
             checkAdditionalDelivery.Checked = selectedProduct.delivery;
-            checkAdditionalInstallation.Checked = selectedProduct.installation;
+            checkAdditionalWarranty.Checked = selectedProduct.warranty;
 
             dateTimePicker1.Value = selectedProduct.dateAdded;
         }

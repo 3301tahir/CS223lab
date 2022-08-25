@@ -23,7 +23,7 @@ namespace CS223lab
             label6.Text = product.price.ToString();
             label7.Text = product.availability ? "Yes" : "No";
             label8.Text = product.delivery ? "Yes" : "No";
-            label9.Text = product.installation ? "Yes" : "No";
+            label9.Text = product.warranty ? "Yes" : "No";
         }
     }
 }

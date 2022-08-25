@@ -1,15 +1,15 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\cyberhelmet\\source\\repos\\CS223lab\\CS223lab.csproj": {}
+    "C:\\Users\\cyberhelmet\\source\\repos\\cs223lab\\CS223lab.csproj": {}
   },
   "projects": {
-    "C:\\Users\\cyberhelmet\\source\\repos\\CS223lab\\CS223lab.csproj": {
+    "C:\\Users\\cyberhelmet\\source\\repos\\cs223lab\\CS223lab.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\cyberhelmet\\source\\repos\\CS223lab\\CS223lab.csproj",
+        "projectUniqueName": "C:\\Users\\cyberhelmet\\source\\repos\\cs223lab\\CS223lab.csproj",
         "projectName": "CS223lab",
-        "projectPath": "C:\\Users\\cyberhelmet\\source\\repos\\CS223lab\\CS223lab.csproj",
+        "projectPath": "C:\\Users\\cyberhelmet\\source\\repos\\cs223lab\\CS223lab.csproj",
         "packagesPath": "C:\\Users\\cyberhelmet\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\cyberhelmet\\source\\repos\\CS223lab\\obj\\",
         "projectStyle": "PackageReference",

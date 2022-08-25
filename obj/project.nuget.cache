@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "/3gxztnj/w3z0nuKywop/uVRz5ErMM42B6l2NlVs96qHcrv0LNDWILiJrOD3voB5UdnfWZNBCPeCX1vMu2H+/w==",
+  "dgSpecHash": "BuRabOyZmk1jPoW02IXqCi/xzSUfsl1+nL86amwEJ7bbmP+gciSWQ5Q4HtltB0TikpgeNyQ5SCIhDzFH0eYTww==",
   "success": true,
-  "projectFilePath": "C:\\Users\\cyberhelmet\\source\\repos\\CS223lab\\CS223lab.csproj",
+  "projectFilePath": "C:\\Users\\cyberhelmet\\source\\repos\\cs223lab\\CS223lab.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\cyberhelmet\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",
     "C:\\Users\\cyberhelmet\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",

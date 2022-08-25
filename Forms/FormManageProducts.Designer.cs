@@ -46,7 +46,7 @@
             this.radioAvailabilityNo = new System.Windows.Forms.RadioButton();
             this.label8 = new System.Windows.Forms.Label();
             this.checkAdditionalDelivery = new System.Windows.Forms.CheckBox();
-            this.checkAdditionalInstallation = new System.Windows.Forms.CheckBox();
+            this.checkAdditionalWarranty = new System.Windows.Forms.CheckBox();
             this.btnAdd = new System.Windows.Forms.Button();
             this.btnRemove = new System.Windows.Forms.Button();
             this.dgvProductsList = new System.Windows.Forms.DataGridView();
@@ -203,15 +203,15 @@
             this.checkAdditionalDelivery.Text = "Delivery";
             this.checkAdditionalDelivery.UseVisualStyleBackColor = true;
             // 
-            // checkAdditionalInstallation
+            // checkAdditionalWarranty
             // 
-            this.checkAdditionalInstallation.AutoSize = true;
-            this.checkAdditionalInstallation.Location = new System.Drawing.Point(31, 345);
-            this.checkAdditionalInstallation.Name = "checkAdditionalInstallation";
-            this.checkAdditionalInstallation.Size = new System.Drawing.Size(104, 24);
-            this.checkAdditionalInstallation.TabIndex = 18;
-            this.checkAdditionalInstallation.Text = "Installation";
-            this.checkAdditionalInstallation.UseVisualStyleBackColor = true;
+            this.checkAdditionalWarranty.AutoSize = true;
+            this.checkAdditionalWarranty.Location = new System.Drawing.Point(31, 345);
+            this.checkAdditionalWarranty.Name = "checkAdditionalWarranty";
+            this.checkAdditionalWarranty.Size = new System.Drawing.Size(90, 24);
+            this.checkAdditionalWarranty.TabIndex = 18;
+            this.checkAdditionalWarranty.Text = "Warranty";
+            this.checkAdditionalWarranty.UseVisualStyleBackColor = true;
             // 
             // btnAdd
             // 
@@ -280,7 +280,7 @@
             this.Controls.Add(this.dgvProductsList);
             this.Controls.Add(this.btnRemove);
             this.Controls.Add(this.btnAdd);
-            this.Controls.Add(this.checkAdditionalInstallation);
+            this.Controls.Add(this.checkAdditionalWarranty);
             this.Controls.Add(this.checkAdditionalDelivery);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.radioAvailabilityNo);
@@ -329,7 +329,7 @@
         private RadioButton radioAvailabilityNo;
         private Label label8;
         private CheckBox checkAdditionalDelivery;
-        private CheckBox checkAdditionalInstallation;
+        private CheckBox checkAdditionalWarranty;
         private Button btnAdd;
         private Button btnRemove;
         private DataGridView dgvProductsList;

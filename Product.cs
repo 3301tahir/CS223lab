@@ -17,7 +17,7 @@ namespace CS223lab
         public double price { get; set; }
         public bool availability { get; set; }
         public bool delivery { get; set; }
-        public bool installation { get; set; }
+        public bool warranty { get; set; }
 
         // static private List<Product> list = new List<Product>();
 
@@ -32,7 +32,7 @@ namespace CS223lab
                 this.price + ", " +
                 Convert.ToInt32(this.availability) + ", " +
                 Convert.ToInt32(this.delivery) + ", " +
-                Convert.ToInt32(this.installation) + ")";
+                Convert.ToInt32(this.warranty) + ")";
             try
             {
                 MySQLConnection.ExecuteNonQuery(query);
@@ -55,7 +55,7 @@ namespace CS223lab
                 "price = " + updatedProduct.price + ", " +
                 "availability = " + Convert.ToInt32(updatedProduct.availability) + ", " +
                 "delivery = " + Convert.ToInt32(updatedProduct.delivery) + ", " +
-                "installation = " + Convert.ToInt32(updatedProduct.installation) + 
+                "warranty = " + Convert.ToInt32(updatedProduct.warranty) + 
                 " WHERE productNumber = '" + this.productNumber + "'";
             try
             {
@@ -100,11 +100,11 @@ namespace CS223lab
                         dateAdded = DateTime.Parse(resultSet["dateAdded"].ToString()),
 
                         count = Convert.ToInt32(resultSet["count"]),
-                        price = Convert.ToInt32(resultSet["price"]),
+                        price = Convert.ToDouble(resultSet["price"]),
 
                         availability = Convert.ToBoolean(resultSet["availability"]),
                         delivery = Convert.ToBoolean(resultSet["delivery"]),
-                        installation = Convert.ToBoolean(resultSet["installation"])
+                        warranty = Convert.ToBoolean(resultSet["warranty"])
                     };
                     list.Add(product);
                 }
