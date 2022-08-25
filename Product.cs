@@ -19,7 +19,7 @@ namespace CS223lab
         public bool delivery { get; set; }
         public bool installation { get; set; }
 
-        static private List<Product> list = new List<Product>();
+        // static private List<Product> list = new List<Product>();
 
         public void Add()
         {
@@ -119,6 +119,7 @@ namespace CS223lab
 
         public static Product findByName(string name)
         {
+            List<Product> list = GetAllProducts();
             return list.Find(list => list.name == name);
         }
 

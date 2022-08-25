@@ -21,9 +21,9 @@ namespace CS223lab
             label4.Text = product.name;
             label5.Text = product.count.ToString();
             label6.Text = product.price.ToString();
-            label7.Text = product.availability.ToString();
-            label8.Text = product.delivery.ToString();
-            label9.Text = product.installation.ToString();
+            label7.Text = product.availability ? "Yes" : "No";
+            label8.Text = product.delivery ? "Yes" : "No";
+            label9.Text = product.installation ? "Yes" : "No";
         }
     }
 }

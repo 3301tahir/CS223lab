@@ -12,6 +12,7 @@ namespace CS223lab
         private void Form1_Load(object sender, EventArgs e)
         {
             dgvProductsList.DataSource = Product.GetAllProducts();
+            dgvProductsList.ClearSelection();
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
@@ -53,6 +54,10 @@ namespace CS223lab
                     // Refresh DGV
                     dgvProductsList.DataSource = null;
                     dgvProductsList.DataSource = Product.GetAllProducts();
+                    dgvProductsList.ClearSelection();
+
+                    // Clear fields
+                    btnClear_Click(sender, e);
                 }
                 catch (Exception exception)
                 {
@@ -70,9 +75,9 @@ namespace CS223lab
                     MessageBox.Show("Select product to remove!");
                     return;
                 }
-                    Product selectedProduct = dgvProductsList.SelectedRows[0].DataBoundItem as Product;
-                    Product updatedProduct = new Product
-                    {
+                Product selectedProduct = dgvProductsList.SelectedRows[0].DataBoundItem as Product;
+                Product updatedProduct = new Product
+                {
                         productNumber = tbProductNo.Text,
                         inventoryNumber = tbInventoryNo.Text,
                         dateAdded = dateTimePicker1.Value,
@@ -82,13 +87,17 @@ namespace CS223lab
                         availability = radioAvailabilityYes.Checked,
                         delivery = checkAdditionalDelivery.Checked,
                         installation = checkAdditionalInstallation.Checked
-                    };
-                    selectedProduct.Update(updatedProduct);
-                    MessageBox.Show("Product updated");
+                };
+                selectedProduct.Update(updatedProduct);
+                MessageBox.Show("Product updated");
 
-                    // Refresh DGV
-                    dgvProductsList.DataSource = null;
-                    dgvProductsList.DataSource = Product.GetAllProducts();
+                // Refresh DGV
+                dgvProductsList.DataSource = null;
+                dgvProductsList.DataSource = Product.GetAllProducts();
+                dgvProductsList.ClearSelection();
+
+                // Clear fields
+                btnClear_Click(sender, e);
 
             }
             catch (Exception exception)
@@ -107,12 +116,16 @@ namespace CS223lab
                     return;
                 }
                     
-                    (dgvProductsList.SelectedRows[0].DataBoundItem as Product).Remove();
-                    MessageBox.Show("Product removed");
+                (dgvProductsList.SelectedRows[0].DataBoundItem as Product).Remove();
+                MessageBox.Show("Product removed");
 
-                    // Refresh DGV
-                    dgvProductsList.DataSource = null;
-                    dgvProductsList.DataSource = Product.GetAllProducts();
+                // Refresh DGV
+                dgvProductsList.DataSource = null;
+                dgvProductsList.DataSource = Product.GetAllProducts();
+                dgvProductsList.ClearSelection();
+
+                // Clear fields
+                btnClear_Click(sender, e);
 
             } catch (Exception exception)
             {
@@ -159,7 +172,6 @@ namespace CS223lab
             checkAdditionalInstallation.Checked = selectedProduct.installation;
 
             dateTimePicker1.Value = selectedProduct.dateAdded;
-
         }
     }
 }

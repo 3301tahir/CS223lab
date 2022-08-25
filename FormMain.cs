@@ -12,7 +12,7 @@ namespace CS223lab
 {
     public partial class FormMain : Form
     {
-        public FormMain()
+        public FormMain(string loggedInUsername)
         {
             InitializeComponent();
         }

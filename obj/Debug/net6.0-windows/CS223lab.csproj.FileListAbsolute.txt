@@ -28,3 +28,4 @@ C:\Users\cyberhelmet\source\repos\CS223lab\bin\Debug\net6.0-windows\runtimes\win
 C:\Users\cyberhelmet\source\repos\CS223lab\obj\Debug\net6.0-windows\CS223lab.FormSQLConn.resources
 C:\Users\cyberhelmet\source\repos\CS223lab\obj\Debug\net6.0-windows\CS223lab.csproj.CopyComplete
 C:\Users\cyberhelmet\source\repos\CS223lab\obj\Debug\net6.0-windows\CS223lab.FormManageProducts.resources
+C:\Users\cyberhelmet\source\repos\CS223lab\obj\Debug\net6.0-windows\CS223lab.FormLogin.resources
