@@ -60,21 +60,21 @@
             // addRemoveToolStripMenuItem
             // 
             this.addRemoveToolStripMenuItem.Name = "addRemoveToolStripMenuItem";
-            this.addRemoveToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.addRemoveToolStripMenuItem.Size = new System.Drawing.Size(188, 26);
             this.addRemoveToolStripMenuItem.Text = "Add / Remove";
             this.addRemoveToolStripMenuItem.Click += new System.EventHandler(this.addRemoveToolStripMenuItem_Click);
             // 
             // searchToolStripMenuItem
             // 
             this.searchToolStripMenuItem.Name = "searchToolStripMenuItem";
-            this.searchToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.searchToolStripMenuItem.Size = new System.Drawing.Size(188, 26);
             this.searchToolStripMenuItem.Text = "Search";
             this.searchToolStripMenuItem.Click += new System.EventHandler(this.searchToolStripMenuItem_Click);
             // 
             // displayToolStripMenuItem
             // 
             this.displayToolStripMenuItem.Name = "displayToolStripMenuItem";
-            this.displayToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.displayToolStripMenuItem.Size = new System.Drawing.Size(188, 26);
             this.displayToolStripMenuItem.Text = "Display";
             this.displayToolStripMenuItem.Click += new System.EventHandler(this.displayToolStripMenuItem_Click);
             // 
@@ -88,6 +88,7 @@
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "FormMain";
             this.Text = "FormMain";
+            this.Load += new System.EventHandler(this.FormMain_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);

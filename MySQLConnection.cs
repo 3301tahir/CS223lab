@@ -9,44 +9,26 @@ namespace CS223lab
 {
     internal class MySQLConnection
     {
-        static string connectionString = @"Data Source = localhost; Initial Catalog = CS223labDB; Integrated Security = True";
-        public static SqlConnection connection = new(connectionString);
-        
-        public static int ExecuteNonQuery(string query)
-        {
+        // Public field accessed when creating connections
+        // Is there a better implementation?
+        public static string connString = @"Data Source = localhost; Initial Catalog = CS223labDB; Integrated Security = True";
 
+        // Called after user logins
+        public static bool CheckConnection()
+        {
             try
             {
-                connection.Open();
-                SqlCommand command = new SqlCommand(query, connection);
-                int rowsAffected = command.ExecuteNonQuery();
-                connection.Close();
-                return rowsAffected;
+                using (SqlConnection conn = new SqlConnection(connString))
+                {
+                    conn.Open();
+                    return true;
+                }
             }
             catch (Exception e)
             {
                 MessageBox.Show(e.Message);
-                return -1;
+                return false;
             }
-        }
-
-        public static string ExecuteScalar(string query)
-        {
-            connection.Open();
-            SqlCommand command = new SqlCommand(query, connection);
-            string scalarValue = command.ExecuteScalar().ToString();
-            connection.Close();
-
-            return scalarValue;
-        }
-
-        public static SqlDataReader ExecuteReader(string query)
-        {
-            connection.Open();
-            SqlCommand command = new SqlCommand(query, connection);
-            SqlDataReader reader = command.ExecuteReader();
-
-            return reader;
         }
 
     }

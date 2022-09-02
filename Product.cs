@@ -23,19 +23,37 @@ namespace CS223lab
 
         public void Add()
         {
-            string query = "INSERT INTO Product VALUES('" +
-                this.productNumber + "', '" +
-                this.inventoryNumber + "', '" +
-                this.dateAdded + "', '" +
-                this.name + "', " +
-                this.count + ", " +
-                this.price + ", " +
-                Convert.ToInt32(this.availability) + ", " +
-                Convert.ToInt32(this.delivery) + ", " +
-                Convert.ToInt32(this.warranty) + ")";
+            string query = "EXEC CreateProduct " +
+                "@productNumber, " +
+                "@inventoryNumber, " +
+                "@dateAdded, " +
+                "@name, " +
+                "@count, " +
+                "@price, " +
+                "@availability, " +
+                "@delivery, " +
+                "@warranty ";
+
             try
             {
-                MySQLConnection.ExecuteNonQuery(query);
+                using (SqlConnection conn = new SqlConnection(MySQLConnection.connString))
+                {
+                    conn.Open();
+                    
+                    SqlCommand cmd = new SqlCommand(query, conn);
+                    cmd.Parameters.AddWithValue("@productNumber", this.productNumber);
+                    cmd.Parameters.AddWithValue("@inventoryNumber", this.inventoryNumber);
+                    cmd.Parameters.AddWithValue("@dateAdded", this.dateAdded);
+                    cmd.Parameters.AddWithValue("@name", this.name);
+                    cmd.Parameters.AddWithValue("@count", this.count);
+                    cmd.Parameters.AddWithValue("@price", this.price);
+                    cmd.Parameters.AddWithValue("@availability", Convert.ToInt32(this.availability));
+                    cmd.Parameters.AddWithValue("@delivery", Convert.ToInt32(this.delivery));
+                    cmd.Parameters.AddWithValue("@warranty", Convert.ToInt32(this.warranty));
+
+                    cmd.ExecuteNonQuery();
+                    MessageBox.Show("Product " + this.productNumber + " added");
+                }
             }
             catch (Exception e)
             {
@@ -46,20 +64,38 @@ namespace CS223lab
 
         public void Update(Product updatedProduct)
         {
-            string query = "UPDATE Product SET " +
-                "productNumber = '" + updatedProduct.productNumber + "', " +
-                "inventoryNumber = '" + updatedProduct.inventoryNumber + "', " +
-                "dateAdded = '" + updatedProduct.dateAdded + "', " +
-                "name = '" + updatedProduct.name + "', " +
-                "count = " + updatedProduct.count + ", " +
-                "price = " + updatedProduct.price + ", " +
-                "availability = " + Convert.ToInt32(updatedProduct.availability) + ", " +
-                "delivery = " + Convert.ToInt32(updatedProduct.delivery) + ", " +
-                "warranty = " + Convert.ToInt32(updatedProduct.warranty) + 
-                " WHERE productNumber = '" + this.productNumber + "'";
+            string query = "EXEC UpdateProduct " +
+                "@productNumber, " +
+                "@inventoryNumber, " +
+                "@dateAdded, " +
+                "@name, " +
+                "@count, " +
+                "@price, " +
+                "@availability, " +
+                "@delivery, " +
+                "@warranty, " +
+                "@oldProductNumber ";
             try
             {
-                MySQLConnection.ExecuteNonQuery(query);
+                using (SqlConnection conn = new SqlConnection(MySQLConnection.connString))
+                {
+                    conn.Open();
+
+                    SqlCommand cmd = new SqlCommand(query, conn);
+                    cmd.Parameters.AddWithValue("@productNumber", updatedProduct.productNumber);
+                    cmd.Parameters.AddWithValue("@inventoryNumber", updatedProduct.inventoryNumber);
+                    cmd.Parameters.AddWithValue("@dateAdded", updatedProduct.dateAdded);
+                    cmd.Parameters.AddWithValue("@name", updatedProduct.name);
+                    cmd.Parameters.AddWithValue("@count", updatedProduct.count);
+                    cmd.Parameters.AddWithValue("@price", updatedProduct.price);
+                    cmd.Parameters.AddWithValue("@availability", Convert.ToInt32(updatedProduct.availability));
+                    cmd.Parameters.AddWithValue("@delivery", Convert.ToInt32(updatedProduct.delivery));
+                    cmd.Parameters.AddWithValue("@warranty", Convert.ToInt32(updatedProduct.warranty));
+                    cmd.Parameters.AddWithValue("@oldProductNumber", this.productNumber);
+
+                    cmd.ExecuteNonQuery();
+                    MessageBox.Show("Product " + this.productNumber + " updated");
+                }
             } catch (Exception e)
             {
                 MessageBox.Show(e.Message);
@@ -68,11 +104,19 @@ namespace CS223lab
 
         public void Remove()
         {
-            string query = "DELETE FROM Product WHERE productNumber = '" +
-                this.productNumber + "'";
+            string query = "EXEC DeleteProduct @productNumber";
             try
             {
-                MySQLConnection.ExecuteNonQuery(query);
+                using (SqlConnection conn = new SqlConnection(MySQLConnection.connString))
+                {
+                    conn.Open();
+
+                    SqlCommand cmd = new SqlCommand(query, conn);
+                    cmd.Parameters.AddWithValue("@productNumber", this.productNumber);
+
+                    cmd.ExecuteNonQuery();
+                    MessageBox.Show("Product " + this.productNumber + " removed");
+                }
             }
             catch (Exception e)
             {
@@ -84,31 +128,37 @@ namespace CS223lab
         {
             List<Product> list = new List<Product>();
 
-            string query = "SELECT * FROM Product";
+            string query = "EXEC GetAllProducts";
 
             try
             {
-                SqlDataReader resultSet = MySQLConnection.ExecuteReader(query);
-                while (resultSet.Read())
+                using (SqlConnection conn = new SqlConnection(MySQLConnection.connString))
                 {
-                    Product product = new Product
+                    conn.Open();
+
+                    SqlCommand cmd = new SqlCommand(query,conn);
+
+                    SqlDataReader resultSet = cmd.ExecuteReader();
+                    while (resultSet.Read())
                     {
-                        productNumber = resultSet["productNumber"].ToString(),
-                        inventoryNumber = resultSet["inventoryNumber"].ToString(),
-                        name = resultSet["name"].ToString(),
+                        Product product = new Product
+                        {
+                            productNumber = resultSet["productNumber"].ToString(),
+                            inventoryNumber = resultSet["inventoryNumber"].ToString(),
+                            name = resultSet["name"].ToString(),
 
-                        dateAdded = DateTime.Parse(resultSet["dateAdded"].ToString()),
+                            dateAdded = DateTime.Parse(resultSet["dateAdded"].ToString()),
 
-                        count = Convert.ToInt32(resultSet["count"]),
-                        price = Convert.ToDouble(resultSet["price"]),
+                            count = Convert.ToInt32(resultSet["count"]),
+                            price = Convert.ToDouble(resultSet["price"]),
 
-                        availability = Convert.ToBoolean(resultSet["availability"]),
-                        delivery = Convert.ToBoolean(resultSet["delivery"]),
-                        warranty = Convert.ToBoolean(resultSet["warranty"])
-                    };
-                    list.Add(product);
+                            availability = Convert.ToBoolean(resultSet["availability"]),
+                            delivery = Convert.ToBoolean(resultSet["delivery"]),
+                            warranty = Convert.ToBoolean(resultSet["warranty"])
+                        };
+                        list.Add(product);
+                    }
                 }
-                MySQLConnection.connection.Close();
             } catch (Exception e)
             {
                 MessageBox.Show(e.Message);

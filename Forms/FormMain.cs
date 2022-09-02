@@ -49,5 +49,10 @@ namespace CS223lab
             f.MdiParent = this;
             f.Show();
         }
+
+        private void FormMain_Load(object sender, EventArgs e)
+        {
+            MySQLConnection.CheckConnection();
+        }
     }
 }

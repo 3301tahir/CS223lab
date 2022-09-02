@@ -49,7 +49,6 @@ namespace CS223lab
                         warranty = checkAdditionalWarranty.Checked
                     };
                     newProduct.Add();
-                    MessageBox.Show("Product added");
 
                     // Refresh DGV
                     dgvProductsList.DataSource = null;
@@ -89,7 +88,6 @@ namespace CS223lab
                         warranty = checkAdditionalWarranty.Checked
                 };
                 selectedProduct.Update(updatedProduct);
-                MessageBox.Show("Product updated");
 
                 // Refresh DGV
                 dgvProductsList.DataSource = null;
@@ -117,7 +115,6 @@ namespace CS223lab
                 }
                     
                 (dgvProductsList.SelectedRows[0].DataBoundItem as Product).Remove();
-                MessageBox.Show("Product removed");
 
                 // Refresh DGV
                 dgvProductsList.DataSource = null;
